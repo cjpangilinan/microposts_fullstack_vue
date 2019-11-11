@@ -1,11 +1,12 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
 
 // Middleware
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 const posts = require('./routes/api/posts');

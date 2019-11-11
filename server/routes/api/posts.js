@@ -28,7 +28,7 @@ router.delete('/:id', async (req, res) => {
 
 async function loadPostsCollection() {
   const client = await mongodb.MongoClient.connect(
-    'mongodb://localhost/fullstack',
+    'mongodb://devadmin:Test-123@clusterdev-shard-00-00-1bfv4.mongodb.net:27017,clusterdev-shard-00-01-1bfv4.mongodb.net:27017,clusterdev-shard-00-02-1bfv4.mongodb.net:27017/fullstack?ssl=true&replicaSet=ClusterDev-shard-0&authSource=admin&retryWrites=true&w=majority',
     {
       useNewUrlParser: true,
       useUnifiedTopology: true
